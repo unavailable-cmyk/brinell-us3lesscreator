@@ -1,0 +1,18 @@
+name: Build pinned Windows Geode mod
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install isolated pinned Geode tooling
+        shell: powershell
+        run: .\scripts\setup.ps1
+      - name: Build and package
+        shell: powershell
+        run: .\scripts\build.ps1 -Generator 'Visual Studio 17 2022'
+      - uses: actions/upload-artifact@v7
+        with:
+          name: Vulkanizer-Windows
+          path: build/*.geode

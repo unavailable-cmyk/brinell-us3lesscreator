@@ -1,0 +1,356 @@
+{
+    "schema": 2,
+    "kind": "v2_live",
+    "reason": "director_purge",
+    "level": "Peaceful 2",
+    "total": 273268,
+    "eligible": 205368,
+    "actually_owned": 0,
+    "peak_owned": 205368,
+    "headless_acquired": 200282,
+    "headless_retained": 0,
+    "headless_eliminated_native_move_member_visits": 90432571,
+    "retained_at_test_completion": 165595,
+    "headless_retained_at_test_completion": 162905,
+    "chains": 908,
+    "max_active_chains": 153,
+    "max_dirty_palette_entries": 308,
+    "frames": 243,
+    "native_move_member_visits": 78359234,
+    "native_section_commit_callbacks": 34933240,
+    "eliminated_native_move_member_visits": 92285409,
+    "handoff_cpu_commits": 205368,
+    "sprite_transform_entry_visits": 4632189,
+    "native_sprite_geometry_evaluations_suppressed": 1192,
+    "native_atlas_draws": 4886,
+    "v2_draws": 776,
+    "native_atlas_quads": 4440264,
+    "v2_quads": 4530,
+    "palette_page_boundaries": 1,
+    "material_boundaries": 104,
+    "ownership_boundaries": 1126,
+    "camera_chain_checks": 0,
+    "validation_object_visits": 0,
+    "dependency_guard_member_visits": 2181971,
+    "cached_policies_enabled": true,
+    "cached_policy_hits": 78359234,
+    "cached_policy_misses": 0,
+    "structural_predicate_evaluations_avoided": 313436936,
+    "dense_identity_hits": 78359234,
+    "hash_lookup_fallbacks": 0,
+    "cache_invalidations": 15941,
+    "dynamic_section_checks": 78326385,
+    "precompiled_route_hits": 0,
+    "route_hash_lookups": 40792,
+    "native_atlas_dirty_payload_bytes": 421924128,
+    "native_atlas_upload_events": 4327,
+    "v2_native_commit_violations": 0,
+    "render_failures": 0,
+    "test_completed": true,
+    "reference_validation_enabled": false,
+    "validation_readback_bytes": 0,
+    "routine_transform_readback_bytes": 0,
+    "routine_v2_cpu_position_commits": 0,
+    "routine_geometry_upload_bytes": 0,
+    "max_reference_position_error": 0.0,
+    "max_conservative_pixel_error_bound": 0.0,
+    "pixel_error_budget": 0.125,
+    "cpu_frame_p50_ms": 54.1358,
+    "cpu_frame_p95_ms": 409.5233,
+    "cpu_frame_p99_ms": 1818.0631,
+    "gpu_timing_status": "async_timestamps_first_atlas_to_swap",
+    "native_fallback_drawing": "original_contiguous_atlas_ranges",
+    "runtime_native_to_v2": 0,
+    "cache_invalidations_by_source": {
+        "layer_group_add": 0,
+        "layer_group_remove": 0,
+        "group_parent_add": 0,
+        "group_parent_remove": 0,
+        "group_parent_set": 0,
+        "group_parent_remove_one": 0,
+        "group_parent_promote": 0,
+        "group_parent_load": 0,
+        "object_type": 0,
+        "start_position": 15940,
+        "object_group_add": 0,
+        "object_group_remove": 0,
+        "object_reset": 0,
+        "retirement": 0,
+        "scene_destroy": 1
+    },
+    "cache_invalidations_after_ready": 15941,
+    "level_time": 94.64125686608156,
+    "native_progress_wall_s": 36.7878803,
+    "cpu_while_owned_samples": 242,
+    "cpu_while_owned_p50_ms": 54.1358,
+    "cpu_while_owned_p95_ms": 409.5233,
+    "cpu_while_owned_p99_ms": 1818.0631,
+    "initial_geometry_and_palette_upload_bytes": 62395892,
+    "palette_upload_bytes": 0,
+    "draw_uniform_upload_bytes": 52768,
+    "resident_gpu": {
+        "aggressive_ownership": true,
+        "logical_move_member_operations": 170644643,
+        "movement_coverage": 0.5408046064475637,
+        "ownership_acquisitions": 205368,
+        "ownership_revocations": 205368,
+        "persistent_edits": false,
+        "retained_native_edits": 0,
+        "retained_position_rebases": 0,
+        "retained_geometry_changes": 0,
+        "retained_rebase_batches": 0,
+        "retained_reentrant_fallbacks": 0,
+        "native_state_applications": 3459823,
+        "mirrors_by_consumer": {
+            "native_activation": 130663,
+            "native_group_anchor": 80666,
+            "native_opacity_change": 1307965,
+            "native_sprite_transform": 2924,
+            "native_vertex_color_change": 27143,
+            "ownership_revocation": 94083,
+            "resident_texture_rectangle_read": 3327152
+        },
+        "section_candidates": 0,
+        "section_transition_callbacks": 3229316,
+        "commands": 147446,
+        "submissions": 872,
+        "dispatches": 2306,
+        "command_upload_bytes": 28106092,
+        "draws_after_dispatch": 770,
+        "geometry_refresh_upload_bytes": 96512,
+        "cpu_command_pack_and_upload_ms": 50.53850000000003,
+        "cpu_handoff_ms": 405.22330000079825,
+        "cpu_sync_ms": 2480.5203999641026,
+        "validation_checks": 0,
+        "exactness_violations": 0,
+        "validation_readback_bytes": 0,
+        "validation_readback_wait_ms": 0.0,
+        "group_rotation": true,
+        "rotation_group_commands": 115823,
+        "rotation_gpu_recipient_operations": 103686235,
+        "rotation_native_recipient_operations": 46831849,
+        "section_event_batches": 717,
+        "section_event_ms": 2853.898299999996,
+        "synchronous_waits_in_routine_path": 717,
+        "routine_readback_bytes": 103340980,
+        "group_visits": {
+            "87": {
+                "owned": 52156,
+                "native": 0,
+                "logical": 52156,
+                "coverage": 1.0
+            },
+            "537": {
+                "owned": 3808,
+                "native": 0,
+                "logical": 3808,
+                "coverage": 1.0
+            },
+            "540": {
+                "owned": 17000,
+                "native": 0,
+                "logical": 17000,
+                "coverage": 1.0
+            },
+            "575": {
+                "owned": 28318606,
+                "native": 50040584,
+                "logical": 78359190,
+                "coverage": 0.361394828098657
+            },
+            "576": {
+                "owned": 4514,
+                "native": 9652,
+                "logical": 14166,
+                "coverage": 0.3186502894253847
+            },
+            "587": {
+                "owned": 0,
+                "native": 1201,
+                "logical": 1201,
+                "coverage": 0.0
+            },
+            "591": {
+                "owned": 81765,
+                "native": 15936,
+                "logical": 97701,
+                "coverage": 0.8368901034789817
+            },
+            "592": {
+                "owned": 26544,
+                "native": 0,
+                "logical": 26544,
+                "coverage": 1.0
+            },
+            "647": {
+                "owned": 234430,
+                "native": 0,
+                "logical": 234430,
+                "coverage": 1.0
+            },
+            "653": {
+                "owned": 374755,
+                "native": 0,
+                "logical": 374755,
+                "coverage": 1.0
+            },
+            "655": {
+                "owned": 91630,
+                "native": 0,
+                "logical": 91630,
+                "coverage": 1.0
+            },
+            "659": {
+                "owned": 42895,
+                "native": 14960,
+                "logical": 57855,
+                "coverage": 0.7414225218217959
+            },
+            "661": {
+                "owned": 175458,
+                "native": 448539,
+                "logical": 623997,
+                "coverage": 0.28118404415405845
+            },
+            "662": {
+                "owned": 9768,
+                "native": 0,
+                "logical": 9768,
+                "coverage": 1.0
+            },
+            "663": {
+                "owned": 4,
+                "native": 0,
+                "logical": 4,
+                "coverage": 1.0
+            },
+            "664": {
+                "owned": 352,
+                "native": 32,
+                "logical": 384,
+                "coverage": 0.9166666666666666
+            },
+            "805": {
+                "owned": 1292236,
+                "native": 2131580,
+                "logical": 3423816,
+                "coverage": 0.37742565605161027
+            },
+            "806": {
+                "owned": 1235241,
+                "native": 1043963,
+                "logical": 2279204,
+                "coverage": 0.5419615795690075
+            },
+            "815": {
+                "owned": 616680,
+                "native": 6223685,
+                "logical": 6840365,
+                "coverage": 0.09015308393631041
+            },
+            "819": {
+                "owned": 59769,
+                "native": 14400,
+                "logical": 74169,
+                "coverage": 0.8058488047567043
+            },
+            "845": {
+                "owned": 3402177,
+                "native": 1770643,
+                "logical": 5172820,
+                "coverage": 0.6577025684249597
+            },
+            "848": {
+                "owned": 53906412,
+                "native": 16578918,
+                "logical": 70485330,
+                "coverage": 0.7647890986677653
+            },
+            "849": {
+                "owned": 52920,
+                "native": 0,
+                "logical": 52920,
+                "coverage": 1.0
+            },
+            "913": {
+                "owned": 1195414,
+                "native": 65141,
+                "logical": 1260555,
+                "coverage": 0.9483235558940308
+            },
+            "952": {
+                "owned": 7056,
+                "native": 0,
+                "logical": 7056,
+                "coverage": 1.0
+            },
+            "955": {
+                "owned": 4680,
+                "native": 0,
+                "logical": 4680,
+                "coverage": 1.0
+            },
+            "957": {
+                "owned": 106080,
+                "native": 0,
+                "logical": 106080,
+                "coverage": 1.0
+            },
+            "958": {
+                "owned": 61215,
+                "native": 0,
+                "logical": 61215,
+                "coverage": 1.0
+            },
+            "961": {
+                "owned": 908440,
+                "native": 0,
+                "logical": 908440,
+                "coverage": 1.0
+            },
+            "964": {
+                "owned": 3404,
+                "native": 0,
+                "logical": 3404,
+                "coverage": 1.0
+            }
+        },
+        "compute_samples": 587,
+        "compute_sample_sum_ms": 17976.289780000006,
+        "compute_batch_p50_ms": 32.95214,
+        "compute_batch_p95_ms": 76.8108
+    },
+    "gpu_frame_p50_ms": 0.21624,
+    "gpu_frame_p95_ms": 5.12049,
+    "gpu_frame_p99_ms": 9223363346228.574,
+    "gpu_samples": 28,
+    "gpu_samples_skipped_without_waiting": 0,
+    "level_80_90": {
+        "level_start": 80,
+        "level_end": 90,
+        "frames": 23,
+        "cpu_frame_p50_ms": 165.442,
+        "cpu_frame_p95_ms": 1818.0631,
+        "cpu_frame_p99_ms": 2775.7949,
+        "native_move_member_visits": 34725152,
+        "eliminated_native_move_member_visits": 52410599,
+        "gpu_timing": "not isolated for this interval"
+    },
+    "rejections": {
+        "native_parent_propagation": 4260,
+        "no_translation_membership": 47363,
+        "non_decoration": 16221,
+        "object_class": 56
+    },
+    "inactive_readiness": {},
+    "ownership_handoffs": {
+        "director_purge": 165507,
+        "native_position_setter": 38350,
+        "resident_rotation_no_center": 1511
+    },
+    "unsupported_trigger_ids": {
+        "899": 4278,
+        "1520": 124
+    },
+    "unreviewed_loaded_mods": []
+}

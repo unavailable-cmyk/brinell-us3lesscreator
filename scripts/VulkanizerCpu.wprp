@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WindowsPerformanceRecorder Version="1.0">
+  <Profiles>
+    <!--
+      Focused CPU profile for Vulkanizer. The built-in CPU profile also enables
+      many unrelated system providers; this profile keeps kernel CPU samples,
+      context switches, process/thread metadata, and the stacks needed to
+      attribute GD's CPU work while avoiding that extra event traffic.
+    -->
+    <SystemCollector Id="VulkanizerCpuCollector" Name="Vulkanizer CPU Collector">
+      <BufferSize Value="1024" />
+      <Buffers Value="512" />
+    </SystemCollector>
+    <SystemProvider Id="VulkanizerCpuProvider">
+      <Keywords>
+        <Keyword Value="CpuConfig" />
+        <Keyword Value="CSwitch" />
+        <Keyword Value="IdealProcessor" />
+        <Keyword Value="Loader" />
+        <Keyword Value="ProcessThread" />
+        <Keyword Value="ReadyThread" />
+        <Keyword Value="SampledProfile" />
+        <Keyword Value="ThreadPriority" />
+      </Keywords>
+      <Stacks>
+        <Stack Value="CSwitch" />
+        <Stack Value="ReadyThread" />
+        <Stack Value="SampledProfile" />
+      </Stacks>
+    </SystemProvider>
+    <Profile Id="VulkanizerCpu.Verbose.File" Name="VulkanizerCpu" Description="Vulkanizer focused CPU and scheduling profile" LoggingMode="File" DetailLevel="Verbose">
+      <Collectors>
+        <SystemCollectorId Value="VulkanizerCpuCollector">
+          <SystemProviderId Value="VulkanizerCpuProvider" />
+        </SystemCollectorId>
+      </Collectors>
+    </Profile>
+  </Profiles>
+</WindowsPerformanceRecorder>
