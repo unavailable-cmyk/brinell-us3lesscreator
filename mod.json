@@ -1,92 +1,32 @@
 {
 	"geode": "6.0.0-alpha.1",
-	"gd": {
-		"win": "2.2091"
-	},
-	"id": "us3lesscreator.vulkanizer",
-	"name": "Vulkanizer",
-	"version": "v0.1.0-alpha.2",
+	"gd": { "win": "2.2091" },
+	"id": "us3lesscreator.brinell",
+	"name": "Brinell",
+	"version": "v0.2.0-alpha.1",
 	"developer": "Us3lessCreator",
-	"description": "Experimental Vulkan renderer and diagnostics for Geometry Dash",
+	"description": "CPU optimization and frame diagnostics for Geometry Dash",
 	"settings": {
-		"experimental-v2-shared-chains": {
-			"name": "Experimental V2 shared translation chains",
-			"description": "Compile verified simple decorations into persistent shared translation chains. Uncertain dependencies retain native ownership. Requires restart. Live validation is in progress.",
-			"type": "bool", "default": false, "requires-restart": true
+		"cpu-transform-batching": {
+			"name": "CPU transform batching",
+			"description": "Batch eligible ordered transform operations and cache their shared translation state.",
+			"type": "bool",
+			"default": false,
+			"requires-restart": true
 		},
-		"experimental-resident-rendering": {
-			"name": "Experimental resident decoration rendering",
-			"description": "R1: one selected simple decoration, translation only, visible and within one spatial section. Requires Zink, automatic transforms, culling off and restart. Unsupported cases return to legacy rendering.",
-			"type": "bool", "default": false, "requires-restart": true
-		},
-		"resident-decoration-group": {
-			"name": "Resident decoration group",
-			"description": "Explicit controlled test group. Only one eligible member is owned. Use 0 to disable selection.",
-			"type": "int", "default": 0, "min": 0, "max": 9999, "requires-restart": true
-		},
-		"experimental-renderer": {
-			"name": "Experimental Zink session",
-			"description": "Verify the experimental GL-to-Vulkan route. Use the Vulkanizer launcher to select Zink before game startup. Changing this setting alone cannot switch the loaded graphics driver. Requires restart.",
+		"transform-culling": {
+			"name": "Transform culling",
+			"description": "Defer conservative off-screen transform work while preserving native visibility ownership.",
 			"type": "bool",
 			"default": false,
 			"requires-restart": true
 		},
 		"frame-diagnostics": {
 			"name": "Frame diagnostics",
-			"description": "Log CPU frame intervals and Cocos phase timings every 1024 frames. When off, diagnostic phase hooks are removed from normal play. Requires restart.",
+			"description": "Collect CPU frame timing and callback diagnostics.",
 			"type": "bool",
 			"default": false,
-			"requires-restart": true
-		},
-		"transform-cost-diagnostics": {
-			"name": "Transform cost diagnostics",
-			"description": "Sample transform and section-processing costs and log aggregate coverage. Intended for short diagnostic runs; requires restart.",
-			"type": "bool",
-			"default": false,
-			"requires-restart": true
-		},
-		"experimental-gpu-transform": {
-			"name": "Experimental GPU move/rotation pilot",
-			"description": "Offloads one explicitly selected decorative group through Zink compute with a same-frame batched readback. Unsupported or unsafe batches use vanilla processing. Requires Experimental Zink session and restart.",
-			"type": "bool",
-			"default": false,
-			"requires-restart": true
-		},
-		"experimental-gpu-transform-all": {
-			"name": "Experimental automatic transform optimization",
-			"description": "Batches ordered move/rotation operations for independent visual objects across simulation steps and resolves them through Zink before visibility updates. Collision objects, references and unsupported trigger dependencies retain CPU processing. Native comparisons and GPU error fallback protect the experimental path. Requires Experimental Zink session and restart.",
-			"type": "bool",
-			"default": false,
-			"requires-restart": true
-		},
-		"experimental-transform-culling": {
-			"name": "Experimental transformation culling",
-			"description": "Defers off-screen decorative transformations in shared action lists. Conservative swept bounds, camera margins, dependency barriers and bounded queues force resolution before the state is needed. Requires automatic transform optimization and Zink. Unsupported cases use the existing path. Requires restart.",
-			"type": "bool",
-			"default": false,
-			"requires-restart": true
-		},
-		"experimental-level-precompile": {
-			"name": "Experimental level precompilation",
-			"description": "Prepare eligible trigger group caches when a level loads. Requires automatic transform optimization and Zink. Unsupported levels use the existing path. Requires restart.",
-			"type": "bool",
-			"default": false,
-			"requires-restart": true
-		},
-		"experimental-group575-movement": {
-			"name": "Experimental Group 575 movement",
-			"description": "Controlled Group 575 test. Shares ordered move/rotation batches while retaining native Player-X-lock calculations and actual CPU dependencies. Requires automatic transforms, Zink, culling off and restart.",
-			"type": "bool", "default": false, "requires-restart": true
-		},
-		"gpu-transform-pilot-group": {
-			"name": "GPU transform pilot group ID",
-			"description": "Use a dedicated group containing only simple decoration objects. Runtime safety checks reject mixed, gameplay, trigger, or dynamic center/target groups. Set to 0 to disable group selection.",
-			"type": "int",
-			"default": 0,
-			"min": 0,
-			"max": 999,
 			"requires-restart": true
 		}
 	}
 }
-
